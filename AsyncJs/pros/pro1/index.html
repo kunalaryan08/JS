@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard Check</title>
+    <style>
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        h1{
+            /* text-align: center; */
+            color: darkmagenta;
+            font-size: 60px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        span{
+            color: orange;
+        }
+
+        #whiter {
+            color: white;
+        }
+
+        #greener{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Click <span>anywhere</span> and <span id="whiter">watch</span> the <span id="greener">magic</span></h1>
+    </div>
+    <script>
+        const insert = document.querySelector('h1');
+        window.addEventListener('keydown', (e) => {
+            document.querySelector('h1').innerHTML = `
+                <div>
+                    <h1>Key => ${e.key}</h1>
+                    <h2>Key Code => ${e.keyCode}</h2>
+                </div>
+            `
+        })
+
+    </script>
+</body>
+</html>

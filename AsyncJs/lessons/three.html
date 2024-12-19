@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Avengers</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        
+        function change(){
+            document.querySelector('h1').innerHTML = "Gaurdians of the Galaxy";
+        }
+        let timeStart;
+        document.querySelector('#start').addEventListener('click', function(e){
+            timeStart = setInterval(change, 3000)
+            console.log("Time has begun!!!");
+        })
+        document.querySelector('#stop').addEventListener('click', function (e){
+            clearInterval(timeStart)
+            console.log("Time has Stopped!!!");
+        })
+        
+    </script>
+</body>
+</html>
